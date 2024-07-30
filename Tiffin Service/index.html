@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tiffin Service</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#ordered">Ordered</a></li>
+                <li><a href="#rating">Rating</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2 class="quote"><i>"Enjoy the comfort of home-cooked meals delivered right to your doorstep. Our tiffin service brings you fresh, delicious, and nutritious food every day, so you can savor the taste of home without the hassle. Order now and experience the convenience of our reliable door-to-door delivery!"</i></h2>
+    </section>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <div class="menu-item" id="item1">
+            <h3>Dish 1</h3>
+            <p>Description of Dish 1</p>
+            <button onclick="addToCart('Dish 1')" disabled>Order Now</button>
+        </div>
+        <div class="menu-item" id="item2">
+            <h3>Dish 2</h3>
+            <p>Description of Dish 2</p>
+            <button onclick="addToCart('Dish 2')" disabled>Order Now</button>
+        </div>
+        <div class="menu-item" id="item3">
+            <h3>Dish 3</h3>
+            <p>Description of Dish 3</p>
+            <button onclick="addToCart('Dish 3')" disabled>Order Now</button>
+        </div>
+        <div class="menu-item" id="item4">
+            <h3>Dish 4</h3>
+            <p>Description of Dish 4</p>
+            <button onclick="addToCart('Dish 4')" disabled>Order Now</button>
+        </div>
+        <div class="menu-item" id="item5">
+            <h3>Dish 5</h3>
+            <p>Description of Dish 5</p>
+            <button onclick="addToCart('Dish 5')" disabled>Order Now</button>
+        </div>
+        <div class="menu-item" id="item6">
+            <h3>Dish 6</h3>
+            <p>Description of Dish 6</p>
+            <button onclick="addToCart('Dish 6')" disabled>Order Now</button>
+        </div>
+        <div class="menu-item" id="item7">
+            <h3>Dish 7</h3>
+            <p>Description of Dish 7</p>
+            <button onclick="addToCart('Dish 7')" disabled>Order Now</button>
+        </div>
+        <div class="menu-item" id="item8">
+            <h3>Dish 8</h3>
+            <p>Description of Dish 8</p>
+            <button onclick="addToCart('Dish 8')" disabled>Order Now</button>
+        </div>
+        <div class="menu-item" id="item9">
+            <h3>Dish 9</h3>
+            <p>Description of Dish 9</p>
+            <button onclick="addToCart('Dish 9')" disabled>Order Now</button>
+        </div>
+        <div class="menu-item" id="item10">
+            <h3>Dish 10</h3>
+            <p>Description of Dish 10</p>
+            <button onclick="addToCart('Dish 10')" disabled>Order Now</button>
+        </div>
+    </section>
+
+    <section id="ordered">
+        <h2>Ordered Food</h2>
+        <div id="order-list">
+            <!-- Ordered items will be displayed here -->
+        </div>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        <form onsubmit="return loginUser()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="register">
+        <h2>Register</h2>
+        <form onsubmit="return registerUser()">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" required>
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section id="rating">
+        <h2>Give a Rating</h2>
+        <form onsubmit="return submitRating()">
+            <label for="rating-dish">Dish:</label>
+            <input type="text" id="rating-dish" required>
+            <label for="rating-score">Rating (1-5):</label>
+            <input type="number" id="rating-score" min="1" max="5" required>
+            <button type="submit">Submit Rating</button>
+        </form>
+        <div id="ratings-list">
+            <!-- Ratings will be displayed here -->
+        </div>
+    </section>
+
+    <div id="login-status">Please log in to place an order.</div>
+    <script src="scripts.js"></script>
+</body>
+</html>
